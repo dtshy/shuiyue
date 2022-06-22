@@ -1,0 +1,33 @@
+{
+  "name": "shuiyue/msv",
+  "description": "Create Model-Service-Validate Library.",
+  "keywords": [
+    "msv",
+    "shuiyue",
+    "Model-Service-Validate"
+  ],
+  "homepage": "https://www.55blog.cn/",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "shuiyue",
+      "email": "chenjainfei0225@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.2.5",
+    "topthink/framework": "^6.0.0",
+    "topthink/think-orm": "^2.0"
+  },
+  "autoload": {
+    "files": [],
+    "psr-4": {
+      "msv\\": "src/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true
+  }
+}
