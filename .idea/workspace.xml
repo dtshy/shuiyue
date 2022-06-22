@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6bd2ff46-ef55-48b1-bab4-a6269c3b2a76" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/service/Service.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tpl/baseModelTpl.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tpl/baseServiceTpl.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/library/Arr.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/library/Arr.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/library/Str.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/library/Str.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/MSVService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/MSVService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/Service.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/Service.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tpl/modelTpl.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/src/tpl/modelTpl.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tpl/serviceTpl.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/src/tpl/serviceTpl.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tpl/validateTpl.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/src/tpl/validateTpl.tpl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,22 +32,19 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tpl/modelTpl.tpl">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/service/Service.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/tpl/baseServiceTpl.tpl">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/service/MSVService.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="8" column="21" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="21" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/tpl/baseModelTpl.tpl">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -88,7 +93,7 @@
               <item name="shuiyue" type="b2602c69:ProjectViewProjectNode" />
               <item name="shuiyue" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="tpl" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -103,6 +108,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\www\shuiyue" />
+      <recent name="D:\www\shuiyue\src" />
       <recent name="D:\www\shuiyue\src\service" />
     </key>
   </component>
@@ -128,12 +135,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1655862529921</updated>
-      <workItem from="1655862531306" duration="1335000" />
+      <workItem from="1655862531306" duration="2695000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1335000" />
+    <option name="totallyTimeSpent" value="2695000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1048" extended-state="6" />
@@ -182,12 +189,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/src/tpl/modelTpl.tpl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/service/Service.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        <state relative-caret-position="560">
+          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tpl/modelTpl.tpl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tpl/baseModelTpl.tpl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tpl/baseServiceTpl.tpl">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

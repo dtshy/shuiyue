@@ -14,6 +14,8 @@ use think\facade\Db;
 
 class MSVService extends Service
 {
+    protected $tplPath = "/vendor/shuiyue/msv/src/tpl";
+
     //创建模型
     public function create_model($table)
     {
@@ -21,7 +23,7 @@ class MSVService extends Service
         $modelName = Str::camelize($table) . "Model.php";
         $modelPath = app_path() . '/common/model/';
 
-        $modelTpl = app_path() . '/common/model/modelTpl.tpl';
+        $modelTpl = root_path() . $this->tplPath . DIRECTORY_SEPARATOR . 'modelTpl.tpl';
         $fp = fopen($modelTpl, "r");
         $modelStr = fread($fp, filesize($modelTpl));//指定读取大小，这里把整个文件内容读取出来
         $modelStr = str_replace('{#modelName}', Str::camelize($table) . 'Model', $modelStr);
@@ -42,7 +44,7 @@ class MSVService extends Service
      */
     public function create_base_model()
     {
-        $baseModelTpl = app_path() . '/common/model/baseModelTpl.tpl';
+        $baseModelTpl = root_path() . $this->tplPath . DIRECTORY_SEPARATOR . 'baseModelTpl.tpl';
         $fp = fopen($baseModelTpl, "r");
         $modelStr = fread($fp, filesize($baseModelTpl));//指定读取大小，这里把整个文件内容读取出来
 
@@ -66,7 +68,7 @@ class MSVService extends Service
         $serviceName = Str::camelize($table) . "Service.php";
         $servicePath = app_path() . '/common/service/';
 
-        $serviceTpl = app_path() . '/common/service/serviceTpl.tpl';
+        $serviceTpl = root_path() . $this->tplPath . DIRECTORY_SEPARATOR . 'serviceTpl.tpl';
         $fp = fopen($serviceTpl, "r");
         $serviceStr = fread($fp, filesize($serviceTpl));//指定读取大小，这里把整个文件内容读取出来
         $serviceStr = str_replace('{#modelName}', Str::camelize($table) . 'Model', $serviceStr);
@@ -81,14 +83,32 @@ class MSVService extends Service
         return $createResult;
     }
 
+    public function create_base_service(){
+        $baseServiceTpl = root_path() . $this->tplPath . DIRECTORY_SEPARATOR . 'baseServiceTpl.tpl';
+        $fp = fopen($baseServiceTpl, "r");
+        $serviceStr = fread($fp, filesize($baseServiceTpl));//指定读取大小，这里把整个文件内容读取出来
+
+        $serviceName = "Service.php";
+        $servicePath = app_path() . '/common/service/';
+
+        $isCreate = $this->create_file($serviceName, $servicePath, $serviceStr);
+        if ($isCreate) {
+            $createResult = 'create file ' . $serviceName . ' success!';
+        } else {
+            $createResult = 'create file ' . $serviceName . ' fail!';
+        }
+
+        return $createResult;
+    }
+
     //创建Validate
     public function create_validate($table)
     {
         //模型文件名
         $validateName = Str::camelize($table) . "Validate.php";
-        $validatePath = app_path() . '/common/validate/';
+        $validatePath = app_path() . 'common/validate/';
 
-        $validateTpl = app_path() . '/common/validate/validateTpl.tpl';
+        $validateTpl = root_path() . $this->tplPath . DIRECTORY_SEPARATOR . 'validateTpl.tpl';
         $fp = fopen($validateTpl, "r");
         $validateStr = fread($fp, filesize($validateTpl));//指定读取大小，这里把整个文件内容读取出来
         $validateStr = str_replace('{#validateName}', Str::camelize($table) . 'Validate', $validateStr);
@@ -143,7 +163,6 @@ class MSVService extends Service
         $sceneStr = str_replace(':', '=>', $sceneStr);
 
         $validateStr = str_replace('{#sceneArr}', $sceneStr, $validateStr);
-
         $isCreate = $this->create_file($validateName, $validatePath, $validateStr);
         if ($isCreate) {
             $createResult = 'create file ' . $validateName . ' success!';
@@ -166,7 +185,7 @@ class MSVService extends Service
         //文件夹是否存在
         $pathExist = is_dir($filePath);
         if (!$pathExist) {
-            mkdir($filePath, '0755');
+            mkdir($filePath, '0755', true);
         }
 
         $modelExists = file_exists($filePath . $fileName);
