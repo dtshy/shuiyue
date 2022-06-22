@@ -24,10 +24,5 @@
     "psr-4": {
       "msv\\": "src/"
     }
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "config": {
-    "sort-packages": true
   }
 }
