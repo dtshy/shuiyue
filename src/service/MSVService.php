@@ -83,7 +83,8 @@ class MSVService extends Service
         return $createResult;
     }
 
-    public function create_base_service(){
+    public function create_base_service()
+    {
         $baseServiceTpl = root_path() . $this->tplPath . DIRECTORY_SEPARATOR . 'baseServiceTpl.tpl';
         $fp = fopen($baseServiceTpl, "r");
         $serviceStr = fread($fp, filesize($baseServiceTpl));//指定读取大小，这里把整个文件内容读取出来
@@ -119,12 +120,11 @@ class MSVService extends Service
         $scene = [
             'create' => [],
             'edit' => [],
-            'id' => 'id'
+            'id' => ['id']
         ];
 
 
         foreach ($tableColumns as $column) {
-            $item = [];
             $value = [];
             $key = Arr::get($column, 'Field') . '|' . Arr::get($column, 'Comment');
             if (Arr::get($column, 'Null') === 'NO') {
@@ -143,8 +143,7 @@ class MSVService extends Service
                 array_push($value, 'max##' . $length);
             }
             $value = implode('|', $value);
-            $item[$key] = $value;
-            array_push($rule, $item);
+            $rule[$key] = $value;
             if (Arr::get($column, 'Field') !== "id") {
                 array_push($scene['create'], Arr::get($column, 'Field'));
             }
