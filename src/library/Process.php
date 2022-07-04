@@ -6,7 +6,7 @@
  * Time: 11:03
  */
 
-namespace app\common\library;
+namespace msv\library;
 
 
 class Process

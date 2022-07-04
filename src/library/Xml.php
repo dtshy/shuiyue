@@ -6,7 +6,7 @@
  * Time: 9:38
  */
 
-namespace app\common\library;
+namespace msv\library;
 
 
 class Xml

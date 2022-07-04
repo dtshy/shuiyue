@@ -6,7 +6,7 @@
  * Time: 19:20
  */
 
-namespace app\common\library;
+namespace msv\library;
 
 
 class Time

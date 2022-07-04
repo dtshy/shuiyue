@@ -6,7 +6,7 @@
  * Time: 9:09
  */
 
-namespace app\common\library;
+namespace msv\library;
 
 
 /*

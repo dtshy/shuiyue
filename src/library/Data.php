@@ -13,7 +13,7 @@
 // | github 仓库地址 ：https://github.com/zoujingli/ThinkLibrary
 // +----------------------------------------------------------------------
 
-namespace app\common\library;
+namespace msv\library;
 
 
 /**

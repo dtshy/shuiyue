@@ -6,7 +6,7 @@
  * Time: 14:32
  */
 
-namespace app\common\library;
+namespace msv\library;
 
 use think\facade\Env;
 
