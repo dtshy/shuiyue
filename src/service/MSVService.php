@@ -130,11 +130,11 @@ class MSVService extends Service
             if (Arr::get($column, 'Null') === 'NO') {
                 array_push($value, 'require');
             }
-            //获取字段类型
-            $oldType = Arr::get($column, 'Type');
-            if (in_array($oldType, ['create_time', 'update_time', 'delete_time'])) {
+            if (in_array(Arr::get($column, 'Field'), ['create_time', 'update_time', 'delete_time'])) {
                 continue;
             }
+            //获取字段类型
+            $oldType = Arr::get($column, 'Type');
             list($type, $length) = $this->analysisMysqlType($oldType);
             if (in_array($type, ['int', 'tinyint'])) {
                 array_push($value, 'number');
