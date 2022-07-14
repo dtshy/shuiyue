@@ -135,7 +135,7 @@ class Time
      * @param $value
      * @return false|string
      */
-    public function format($format, $value)
+    public static function format($format, $value)
     {
         return $value ? date($format, $value) : "";
     }
