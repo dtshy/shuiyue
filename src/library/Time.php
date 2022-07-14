@@ -129,6 +129,17 @@ class Time
         return [$start, $end];
     }
 
+    /**
+     * 格式化时间或日期
+     * @param $format
+     * @param $value
+     * @return false|string
+     */
+    public function format($format, $value)
+    {
+        return $value ? date($format, $value) : "";
+    }
+
 
     /**
      * 将时间戳格式化成剩余小时
