@@ -93,6 +93,18 @@ class Time
     }
 
     /**
+     * 最近三十天开始结束时间戳，结束到上一天24:00
+     * @return array
+     */
+    public static function preMonth()
+    {
+        $t = time();
+        $start = mktime(0, 0, 0, date("m", $t), date("d", $t) , date("Y", $t));
+        $end = mktime(23, 59, 59, date("m", $t), date("d", $t) + 30, date("Y", $t));
+        return [$start, $end];
+    }
+
+    /**
      * 传入对应月份返回月份的开始和结束时间戳
      * @param $month 1/2/3/4/5/6/7/8/9/10/11/12
      * @return array
