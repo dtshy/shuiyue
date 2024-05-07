@@ -81,6 +81,23 @@ class Time
     }
 
     /**
+     * 获取本周开始和结束时间戳
+     * @return array
+     */
+    public static function week()
+    {
+        // 设置时区为北京时间
+        date_default_timezone_set('Asia/Shanghai');
+
+        // 获取本周的开始时间戳
+        $week_start = strtotime('monday this week');
+
+        // 获取本周的结束时间戳
+        $week_end = strtotime('sunday this week') + 86399; // 加上一天减去一秒
+        return [$week_start, $week_end];
+    }
+
+    /**
      * 最近三十天开始结束时间戳，结束到上一天24:00
      * @return array
      */
@@ -99,7 +116,7 @@ class Time
     public static function preMonth()
     {
         $t = time();
-        $start = mktime(0, 0, 0, date("m", $t), date("d", $t) , date("Y", $t));
+        $start = mktime(0, 0, 0, date("m", $t), date("d", $t), date("Y", $t));
         $end = mktime(23, 59, 59, date("m", $t), date("d", $t) + 30, date("Y", $t));
         return [$start, $end];
     }
